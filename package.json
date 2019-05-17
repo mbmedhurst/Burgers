@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/mbmedhurst/Burgers#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.0",
     "express-handlebars": "^3.0.2",
-    "mysql2": "^1.6.5"
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.19.0",
+    "sequelize": "^5.8.6"
   }
 }
