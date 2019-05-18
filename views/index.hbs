@@ -1,1 +1,7 @@
-<h1>Hello World!</h1>
+{{!-- opening handlebars of the forEach loop --}}
+{{!-- code here will be repeated for every item in the specified array --}}
+{{#each burgers}}
+<div class="burgerCard" data-uid='{{id}}'>
+    <h3>{{burger_name}}</h3> <button class="devourBtn" data-uid='{{id}}'>Devour It</button>
+</div>
+{{/each}}
