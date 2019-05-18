@@ -1,15 +1,16 @@
 const addBurger = _ => {
-    fetch('/burgers'), {
+    fetch('./burgers', {
         method: 'POST',
         headers: {
-            'Content-Type': 'applicaiton/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             burger_name: document.querySelector('#burgerType').value,
             isDevoured: false
         })
-    }
-    .then (_ => {
+    })
+    .then (r => r.json)
+    .then (r => {
         // reload the page
         location.reload()
     })
@@ -39,7 +40,7 @@ document.addEventListener('click', ({target}) => {
         break
         case 'devourBtn':
             console.log('id')
-            // devourBurger(target.dataset.uid)
+            devourBurger(target.dataset.uid)
         break
     }
 })

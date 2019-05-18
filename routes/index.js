@@ -8,12 +8,12 @@ module.exports = app => {
     })
   })
 
-  app.post('/users'), (req, res) => {
+  app.post('/burgers', (req, res) => {
     db.query('INSERT INTO burgers SET ?', req.body, (e) => {
       if (e) throw e
       res.sendStatus(200)
     })
-  }
+  })
 
   app.put('/users/:id'), (req, res) => {
     db.query(`UPDATE burgers SET isDevoured to false WHERE id=${id}`, (e) => {
