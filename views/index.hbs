@@ -1,8 +1,13 @@
-{{!-- opening handlebars of the forEach loop --}}
-
-{{!-- code here will be repeated for every item in the specified array --}}
-{{#each burgers}}
-<div class="burgerCard" data-uid='{{id}}'>
-    <h3>{{burger_name}}</h3> <button class="devourBtn" data-uid='{{id}}'>Devour It</button>
+<div class="container">
+    <div class="col1" id="burgerCard">
+        {{#each newBurgers}}
+        <p class="item"</p>{{burger_name}} <button class="devourBtn" data-uid='{{id}}'>Devour It</button>
+        <br>
+        {{/each}}
+    </div>
+    <div class="col2" id="devouredCard">
+        {{#each devBurgers}}
+        <p id="devoured" class="item">{{burger_name}}</p>
+        {{/each}}
+    </div>
 </div>
-{{/each}}
