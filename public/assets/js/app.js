@@ -30,7 +30,7 @@ document.addEventListener('click', ({target}) => {
         .then (r => r.json)
         .then (r => {
             // reload the page
-            // location.reload()
+            location.reload()
         })
         .catch(e => console.log(e))
     }

@@ -26,11 +26,11 @@ module.exports = app => {
   })
 
   // PUT request to change isDevoured status to TRUE
-  app.put('/burgers/:id'), (req, res) => {
-    db.query(`UPDATE burgers SET isDevoured=true WHERE ?`, { id: req.params.id }(e => {
+  app.put('/burgers/:id', (req, res) => {
+    db.query(`UPDATE burgers SET isDevoured=true WHERE ?`, { id: req.params.id },(e => {
       if (e) throw e
       res.sendStatus(200)
     })
     )
-  }
+  })
 }
