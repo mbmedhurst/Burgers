@@ -14,5 +14,8 @@
 - The text input field and submit button are created using regular html.
 
 ## What Works, What Doesn't
-- Displaying the new (or not devoured) burgers is working, although for some reason it is holding the place of the devoured burgers, so when you add a new burger, it leaves space where there used to be burgers that have been since been devoured
 - I couldn't get the heroku deployment to work. I did the whole Jaws thing and changed the connection info but it still didn't work so I just submitted the git repo.
+
+- Here is a gif of how it works:
+
+![eat-da-burger demo](./public/assets/images/burgers.gif)
