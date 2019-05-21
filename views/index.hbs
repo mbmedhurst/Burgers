@@ -1,13 +1,18 @@
 <div class="container">
     <div class="col1" id="burgerCard">
         {{#each newBurgers}}
-        <p class="item"</p>{{burger_name}} <button class="devourBtn" data-uid='{{id}}'>Devour It</button>
-        <br>
+            {{#unless isDevoured}}
+                <p class="item" </p>{{burger_name}} <button class="devourBtn" data-uid='{{id}}'>Devour It</button>
+            {{/unless}}
+            <br>
         {{/each}}
     </div>
     <div class="col2" id="devouredCard">
         {{#each devBurgers}}
-        <p id="devoured" class="item">{{burger_name}}</p>
+        {{!-- this if handlebar is not working for some reason --}}
+            {{#if isDevoured}}
+                <p id="devoured" class="item">{{burger_name}}</p>
+            {{/if}}
         {{/each}}
     </div>
 </div>

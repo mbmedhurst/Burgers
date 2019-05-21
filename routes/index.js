@@ -1,22 +1,14 @@
 const db = require('../config')
 
 module.exports = app => {
-  // GET request for available burgers
+  // GET request for all burgers
   app.get('/', (req, res) => {
-    db.query('SELECT * FROM burgers WHERE isDevoured=false', (e, newBurgers) => {
+    db.query('SELECT * FROM burgers', (e, newBurgers) => {
       if (e) throw e
       res.render('index', { newBurgers })
     })
   })
 
-  // GET request for devoured burgers
-  app.get('/', (req, res) => {
-    db.query('SELECT * FROM burgers WHERE isDevoured=true', (e, devBurgers) => {
-      if (e) throw e
-      res.render('index', { devBurgers })
-    })
-  })
-  
   // POST request for new burgers
   app.post('/burgers', (req, res) => {
     db.query('INSERT INTO burgers SET ?', req.body, (e) => {
