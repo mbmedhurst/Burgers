@@ -3,9 +3,9 @@ const db = require('../config')
 module.exports = app => {
   // GET request for all burgers
   app.get('/', (req, res) => {
-    db.query('SELECT * FROM burgers', (e, newBurgers) => {
+    db.query('SELECT * FROM burgers', (e, Burgers) => {
       if (e) throw e
-      res.render('index', { newBurgers })
+      res.render('index', { Burgers })
     })
   })
 

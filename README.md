@@ -15,5 +15,4 @@
 
 ## What Works, What Doesn't
 - Displaying the new (or not devoured) burgers is working, although for some reason it is holding the place of the devoured burgers, so when you add a new burger, it leaves space where there used to be burgers that have been since been devoured
-- Displaying the devoured burgers at the same time is not working - something with my {{#if}} condition in my handlebars index file. I looked at a lot of git repos for this assignment and they all seem to use this format so not sure why mine isn't working
-- If you comment out the GET request for new burgers (isDevoured = false) then the GET request for devoured burgers will work and that data will populate on the screen. But I can't populate both at the same time.
+- I couldn't get the heroku deployment to work. I did the whole Jaws thing and changed the connection info but it still didn't work so I just submitted the git repo.
