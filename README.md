@@ -17,4 +17,3 @@
 - Displaying the new (or not devoured) burgers is working
 - Displaying the devoured burgers at the same time is not working - I don't know if it's an asynch issue or maybe you can't do two GET requests simultaneously
 - If you comment out the GET request for new burgers (isDevoured = false) then the GET request for devoured burgers will work and that data will populate on the screen. But I can't populate both at the same time.
-- The PUT request to update the 'isDevoured' status from false to true is not working. I am getting a 404 error. Even if Postman, it's telling me that the path /burgers/:id cannot be found.
